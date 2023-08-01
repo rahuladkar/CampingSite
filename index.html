@@ -322,12 +322,14 @@
                 </div>
             </div>
             <div class="col form">
-                <form>
-                    <input type="text" placeholder="Name*" required>
-                    <input type="number" placeholder="Mobile Number*" name="mNum" id="MobNub">
-                    <input type="email" placeholder="Email*" required>
-                    <textarea placeholder="Message*" required></textarea>
-                    <button id="submit" type="submit">Send Message</button>
+                <form action="https://formsubmit.co/bookmypawana123@gmail.com" method="POST">
+                    <input type="text" placeholder="Name*" name="name" required>
+                    <input type="number" placeholder="Mobile Number*" name="mobNub">
+                    <input type="email" placeholder="Email*" name="email" required>
+                    <input type="date" placeholder="Date*" name="date" required>
+                    <textarea placeholder="Message*" name="message"></textarea>
+                    <input type="hidden" name="_captcha" value="false">
+                    <button type="submit">Send Message</button>
                 </form>
             </div>
         </div>
@@ -358,7 +360,8 @@
         </div>
     </footer>
     <script src="script.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>
