@@ -55,3 +55,39 @@ window.onclick = function (event) {
     closeModal();
   }
 };
+
+// Form validation
+
+function validateForm() {
+  var name = document.forms["myForm"]["name"].value;
+  var email = document.forms["myForm"]["email"].value;
+  var mobNub = document.forms["myForm"]["mobNub"].value;
+
+  if (name == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+
+  if (email == "") {
+    alert("Email must be filled out");
+    return false;
+  } else {
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!emailPattern.test(email)) {
+      alert("Invalid email format");
+      return false;
+    }
+  }
+
+  if (mobNub != "") {
+    var phonePattern = /^[6-9]\d{9}$/;
+    if (!phonePattern.test(mobNub)) {
+      alert(
+        "Invalid phone number format (10 digits starting with 6, 7, 8, or 9)"
+      );
+      return false;
+    }
+  }
+
+  return true;
+}
