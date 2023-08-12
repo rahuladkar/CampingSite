@@ -326,9 +326,10 @@
                 </div>
             </div>
             <div class="col form">
-                <form action="https://formsubmit.co/a52774857b1d764c38291945985fea5b" method="POST">
+                <form name="myForm" action="https://formsubmit.co/a52774857b1d764c38291945985fea5b" method="POST"
+                    onsubmit="return validateForm()">
                     <input type="text" placeholder="Name*" name="name" required>
-                    <input type="number" placeholder="Mobile Number*" name="mobNub">
+                    <input type="tel" placeholder="Mobile Number*" name="mobNub">
                     <input type="email" placeholder="Email*" name="email" required>
                     <input type="date" placeholder="Date*" name="date" required>
                     <textarea placeholder="Message*" name="message"></textarea>
