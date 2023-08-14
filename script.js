@@ -59,35 +59,23 @@ window.onclick = function (event) {
 // Form validation
 
 function validateForm() {
-  var name = document.forms["myForm"]["name"].value;
-  var email = document.forms["myForm"]["email"].value;
-  var mobNub = document.forms["myForm"]["mobNub"].value;
-
-  if (name == "") {
-    alert("Name must be filled out");
+  // Validate Indian mobile number
+  var mobNumInput = document.forms[0].mobNum;
+  var mobNumRegex = /^[6-9]\d{9}$/;
+  if (!mobNumRegex.test(mobNumInput.value)) {
+    alert("Please enter a valid 10-digit Indian mobile number.");
+    mobNumInput.focus();
     return false;
   }
 
-  if (email == "") {
-    alert("Email must be filled out");
+  // Validate email address
+  var emailInput = document.forms[0].email;
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(emailInput.value)) {
+    alert("Please enter a valid email address.");
+    emailInput.focus();
     return false;
-  } else {
-    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    if (!emailPattern.test(email)) {
-      alert("Invalid email format");
-      return false;
-    }
   }
 
-  if (mobNub != "") {
-    var phonePattern = /^[6-9]\d{9}$/;
-    if (!phonePattern.test(mobNub)) {
-      alert(
-        "Invalid phone number format (10 digits starting with 6, 7, 8, or 9)"
-      );
-      return false;
-    }
-  }
-
-  return true;
+  return true; // Form is valid, submit it
 }
