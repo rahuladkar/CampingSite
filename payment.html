@@ -10,6 +10,28 @@
     <meta name="keywords"
         content="pawna camping , pawna lake , pawna lake camping , camping in pune , camping near lonavala , pawna dam camping ,pavana camp , pavana lake camping , pavana lake camp , pawna camp , pawna lake tent , best camping in pawna lake , pawna tennt camping">
     <meta name="author" content=" Adkar">
+
+    <!-- special tags -->
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W7P9GJPF');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0YMN4W8BE6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0YMN4W8BE6');
+    </script>
+
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
@@ -73,7 +95,7 @@
 
         .booking-section img {
             box-shadow: 8px 8px 20px 4px rgba(38, 60, 38, 0.781);
-            width: 50%;
+            width: 40%;
             border-radius: 20px;
             margin-bottom: 1.5rem;
             margin-top: 4rem;
@@ -147,7 +169,7 @@
 
     <header>
         <nav class="navbar">
-            <h2 class="logo"><a href="index.html">Pavana Camping</a></h2>
+            <h2 class="logo"><a href="index.html">Book My Pawana</a></h2>
             <input type="checkbox" id="menu-toggler">
             <label for="menu-toggler" id="hamburger-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
@@ -277,14 +299,20 @@
         document.getElementById('book-now').addEventListener('click', function () {
             var selectedOption = document.querySelector('input[name="payment-option"]:checked').value;
             if (selectedOption === 'full') {
-                window.open('https://rzp.io/l/bookmypawana');
+                window.open('https://rzp.io/l/bookmypawana',);
+                window.open('https://rzp.io/l/Dt783TZX');
+                alert('You selected Advance Payment. Processing...');
             } else if (selectedOption === 'advance') {
                 window.open('https://rzp.io/l/Dt783TZX');
+                alert('You selected Full Payment. Processing...');
             }
         });
-
-
     </script>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7P9GJPF" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 </body>
 
 </html>
